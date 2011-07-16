@@ -2,9 +2,11 @@
 
 class WebsiteToImage
 {
-    const FORMAT_JPG = 'jpg';
-    const FORMAT_GIF = 'gif';
-    const FORMAT_PNG = 'png';
+    const FORMAT_JPG  = 'jpg';
+    const FORMAT_JPEG = 'jpeg';
+    const FORMAT_PNG  = 'png';
+    const FORMAT_TIF  = 'tif';
+    const FORMAT_TIFF = 'tiff';
 
     protected $_programPath;
     protected $_outputFile;
