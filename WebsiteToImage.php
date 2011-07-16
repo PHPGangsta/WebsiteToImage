@@ -7,33 +7,38 @@ class WebsiteToImage
     const FORMAT_PNG = 'png';
 
     protected $_programPath;
-    protected $_outputPath;
+    protected $_outputFile;
     protected $_url;
-    protected $_format;
-    protected $_quality;
+    protected $_format = self::FORMAT_JPG;
+    protected $_quality = 90;
 
     public function start()
     {
         $programPath = escapeshellcmd($this->_programPath);
-        $outputPath  = escapeshellarg($this->_outputPath);
+        $outputFile  = escapeshellarg($this->_outputFile);
         $url         = escapeshellarg($this->_url);
         $format      = escapeshellarg($this->_format);
         $quality     = escapeshellarg($this->_quality);
 
-        $command = "$programPath --format $format --quality $quality $url $outputPath";
+        $command = "$programPath --format $format --quality $quality $url $outputFile";
 
         exec($command);
     }
 
-    public function setOutputPath($outputPath)
+    public function setOutputFile($outputFile)
     {
-        $this->_outputPath = $outputPath;
+        clearstatcache();
+        if (!is_writable(dirname($outputFile))) {
+            throw new Exception('output file not writable');
+        }
+        
+        $this->_outputFile = $outputFile;
         return $this;
     }
 
-    public function getOutputPath()
+    public function getOutputFile()
     {
-        return $this->_outputPath;
+        return $this->_outputFile;
     }
 
     public function setProgramPath($programPath)
