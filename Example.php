@@ -1,3 +1,4 @@
+/* Convert the Website to Image into desired format */
 <?php
 
 require_once 'WebsiteToImage.php';
