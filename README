@@ -1,1 +1,8 @@
+Creating a simple manual screenshot of a website is easy, I don't need to explain it here.
+However, if you want to create screenshots of websites from your PHP application or if you don't feel like copying them together manually because the website is very long or wide, 
+the wkhtmltopdf project helps .
+This command line tool is available for Windows, Linux and Mac, and it also runs on servers without a graphical user interface. 
+Both wkhtmltopdf and wkhtmltoimage can be found on the project's website.
+wk stands for the Webkit Render Engine, which creates either a PDF or an image (jpg, png, tiff) from a given HTML input.
+
 For more information see http://phpgangsta.de/2794
