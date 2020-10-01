@@ -1,3 +1,5 @@
+WebsiteTolmage - An Amazing Project
+
 <?php
 
 class WebsiteToImage
