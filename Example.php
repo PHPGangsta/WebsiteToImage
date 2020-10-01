@@ -1,4 +1,4 @@
-<?php
+<?php //hypertex preprocessor
 
 require_once 'WebsiteToImage.php';
 
