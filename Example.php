@@ -12,3 +12,7 @@ $websiteToImage->setProgramPath('/usr/local/bin/wkhtmltoimage-i386')
 $websiteToImage->setFormat(WebsiteToImage::FORMAT_PNG)
                ->setOutputFile('www.phpgangsta.de.png')
                ->start();
+
+$websiteToImage->setFormat(WebsiteToImage::FORMAT_RAW)
+               ->setOutputFile('www.phpgangsta.de.raw')
+               ->start();
