@@ -38,7 +38,7 @@ class WebsiteToImage
         return $this;
     }
 
-    public function getOutputFile()
+    public function getOutputFileNow()
     {
         return $this->_outputFile;
     }
