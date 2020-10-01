@@ -7,6 +7,7 @@ class WebsiteToImage
     const FORMAT_PNG  = 'png';
     const FORMAT_TIF  = 'tif';
     const FORMAT_TIFF = 'tiff';
+    const FORMAT_RAW  = 'raw';
 
     protected $_programPath;
     protected $_outputFile;
